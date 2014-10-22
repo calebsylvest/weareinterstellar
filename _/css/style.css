@@ -1,0 +1,298 @@
+/* Font imports
+-------------------------------------------------------------------------------*/
+@font-face {
+    font-family: 'FuturaBold';
+    src: url('../fonts/FuturaStd-Bold.eot');
+    src: url('../fonts/FuturaStd-Bold.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/FuturaStd-Bold.woff') format('woff'),
+         url('../fonts/FuturaStd-Bold.ttf') format('truetype'),
+         url('../fonts/FuturaStd-Bold.svg#FuturaBold') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'AdelleBold';
+    src: url('../fonts/AdelleBasic_Bold.eot');
+    src: url('../fonts/AdelleBasic_Bold.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/AdelleBasic_Bold.woff') format('woff'),
+         url('../fonts/AdelleBasic_Bold.ttf') format('truetype'),
+         url('../fonts/AdelleBasic_Bold.svg#AdelleBold') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Bitter';
+    src: url('../fonts/bitter-regular-webfont.eot');
+    src: url('../fonts/bitter-regular-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/bitter-regular-webfont.woff') format('woff'),
+         url('../fonts/bitter-regular-webfont.ttf') format('truetype'),
+         url('../fonts/bitter-regular-webfont.svg#AdelleBold') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'WisdomScript';
+    src: url('../fonts/wisdom_script-webfont.eot');
+    src: url('../fonts/wisdom_script-webfont?#iefix') format('embedded-opentype'),
+         url('../fonts/wisdom_script-webfont.woff') format('woff'),
+         url('../fonts/wisdom_script-webfont.ttf') format('truetype'),
+         url('../fonts/wisdom_script-webfont.svg#WisdomScript') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/* Apply a natural box layout model to all elements: http://paulirish.com/2012/box-sizing-border-box-ftw/ */
+* { -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; }
+
+.chromeframe {position: absolute; top: 0;}
+
+/* Ok, this is where the fun starts.
+-------------------------------------------------------------------------------*/
+
+body {font: 87.5% 'Bitter', 'Myriad Pro', Helvetica, Arial, sans-serif;}
+
+body, select, input, textarea {color: #4a504f;}
+
+a {color: #ea4628; text-decoration: none; -webkit-transition: all 0.3s ease-in; -moz-transition: all 0.3s ease-in; transition: all 0.3s ease-in;}
+a:hover {color: #63b5a1;}
+
+/* Accessible focus treatment */
+a:hover, a:active, a:visited, a:focus, a:link {outline: none;}
+
+::-moz-selection{background: #63b5a1; color: #fff; text-shadow: none;}
+::selection {background: #63b5a1; color: #fff; text-shadow: none;} 
+
+a:link {-webkit-tap-highlight-color: #ea4628;} 
+
+ins {background-color: #ea4628; color: #000; text-decoration: none;}
+mark {background-color: #ea4628; color: #000; font-style: italic; font-weight: bold;}
+
+/* Mozilla dosen't style place holders by default */
+input:-moz-placeholder { color:#a9a9a9; }
+textarea:-moz-placeholder { color:#a9a9a9; }
+
+/* kill the blue glow of input fields */
+input:focus,
+textarea:focus {
+	box-shadow: 0;
+	outline: none;
+}
+
+h1, h2, h3, h4, h5, h6 {font-weight: normal; letter-spacing: .05em;}
+
+h1 {
+	font-family: 'FuturaBold', Helvetica, Arial, sans-serif;
+	font-size: 7em;
+	text-transform: uppercase;
+	color: #fff;
+	line-height: 95%;
+	padding: .4em 0;
+}
+
+h2 {
+	font-family: 'FuturaBold', Helvetica, Arial, sans-serif;
+	font-size: 4em;
+	text-transform: uppercase;
+	color: #fff;
+	line-height: 95%;
+}
+
+h3 {
+	font-family: 'WisdomScript', Helvetica, Arial, sans-serif;
+	color: #fff;
+	font-size: 2.5em;
+	margin-bottom: .5em;
+	display: inline-block;
+	letter-spacing: 0em;
+}
+
+p {margin-bottom: 0.9em; line-height: 140%; font-size: 1.2em; letter-spacing: .03em;}
+
+
+/* Global styles!
+-------------------------------------------------------------------------------*/
+
+/* -----LAYOUT & POSITIONING ----- */
+html {
+	width: 100%;
+	height: 100%;
+}
+
+body {
+	width: 100%;
+	height: 100%;
+	background: #000 url(../images/bg-feature.jpg) no-repeat center top fixed;
+	background-size: 100% auto;
+}
+
+.wrapper {
+	width: 100%;
+	height: 100%;
+}
+
+.story {
+	width: 100%;
+	height: auto;
+}
+
+.container {
+	width: 80%;
+	max-width: 1080px;
+	min-width: 700px;
+	margin: 0 auto;
+}
+
+.small-container {
+	width: 60%;
+	max-width: 800px;
+	min-width: 700px;
+	margin: 0 auto;
+}
+
+.three-quarter {width: 75%;}
+.sixty {width: 60%;}
+.half {width: 50%;}
+.third {width: 30%;}
+.quarter {width: 22%;}
+.fifth {width: 18%;}
+
+/* ----- STYLES ----- */
+
+/* HERO SECTION */
+
+.hero {
+	width: 100%;
+	/* height: 100%; */
+	position: relative;
+	min-height: 600px;
+}
+
+.brand {
+	text-align: center;
+	padding: 12em 0;
+}
+
+.brand a.logo {
+	width: 161px;
+	height: 161px;
+	display: block;
+	margin: 0 auto;
+	text-indent: -9999px;
+	background: #ea4628 url(../images/we-are-interstellar-logo.png) no-repeat center center;
+	-webkit-border-radius: 999em;
+	-moz-border-radius: 999em;
+	border-radius: 999em;
+}
+
+.brand a.logo:hover {
+	background-color: #63b5a1;
+}
+
+.about {
+	background: #f0f0f0 url(../images/bg-about.jpg) repeat;
+	padding: 4em;
+	border: 2px solid #fff;
+	border-right: 0;
+	border-left: 0;
+}
+
+.contact {
+	min-height: 800px;
+	padding: 9em 5em;
+	text-align: center;
+	background: #000 url(../images/bg-contact.jpg) no-repeat center top fixed;
+	background-size: 100% auto;
+}
+
+.contact .contact-form {
+	margin-top: 4em;
+	text-align: left;
+}
+
+.contact .input-section,
+.contact .comment-section {
+	width: 42%;
+	margin: 0 4% 2em;
+	float: left;
+}
+
+.contact input.form-field,
+.contact textarea.form-field {
+	width: 100%;
+	margin-bottom: 1em;
+	padding: 1.2em;
+	border: 0;
+	background-color: #fdfbe6;
+	font-family: 'Bitter', 'Myriad Pro', Helvetica, Arial, sans-serif;
+	-webkit-border-radius: .5em;
+	-moz-border-radius: .5em;
+	border-radius: .5em;
+}
+
+.comment-field {
+	resize: vertical;
+	min-height: 179px;
+}
+
+input.submit-button {
+	display: block;
+	background-color: #63b5a1;
+	margin: 0 auto;
+	padding: 1.1em 6em;
+	color: #fff;
+	font-size: 1.3em;
+	font-family: 'FuturaBold', Helvetica, Arial, sans-serif;
+	text-align: center;
+	text-transform: uppercase;
+	letter-spacing: .1em;
+	border: 1px solid #74c9b4;
+	-webkit-border-radius: .5em;
+	-moz-border-radius: .5em;
+	border-radius: .5em;
+}
+
+input.submit-button:hover {
+	background-color: #f05134;
+	border-color: #c8422b;
+	-webkit-transition: all 0.3s ease;
+	-moz-transition: all 0.3s ease;
+	transition: all 0.3s ease;
+}
+
+/* ----- REUSABLE CLASSES ----- */
+
+.red-line {
+	border-bottom: 1px solid #f05134;
+}
+
+.triangle-icon {
+	width: 30px;
+	height: 30px;
+	background: url(../images/icon-triangle.png) no-repeat center center;
+	margin: 4em auto;
+}
+
+.link-underline {
+	border-bottom: 1px dotted #f05134;
+}
+.link-underline:hover {
+	border-color: #63b5a1;
+}
+/* Media queries!
+-------------------------------------------------------------------------------*/
+
+@media screen and (max-width: 480px) {
+	
+		
+}
+
+/* Print styles!
+-------------------------------------------------------------------------------*/
+@media print {
+
+
+
+}
