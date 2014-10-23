@@ -1,0 +1,80 @@
+/* Forms */
+
+input {
+	//width: 100%;
+}
+
+input[type="text"],
+input[type="password"],
+input[type="email"],
+input[type="url"],
+input[type="month"],
+input[type="date"],
+input[type="time"],
+input[type="datetime-local"],
+input[type="datetime"],
+input[type="week"],
+input[type="number"],
+input[type="search"],
+input[type="tel"],
+input[type="color"],
+input[type="phone"],
+select,
+textarea {
+	font-family: "Open Sans", Helvetica, Arial, sans-serif;
+	font-size: 13px;
+	font-weight: 400;
+	color: #444444;
+	width: 100%;
+	margin: 0;
+	padding: 40px 20px 20px 20px;
+	border: 1px solid #eeeeee;
+	border-left: 0;
+	border-right: 0;
+	/* background: #ffffff; */
+	-webkit-transition: all 0.3s linear;
+	-moz-transition: all 0.3s linear;
+	-ms-transition: all 0.3s linear;
+	-o-transition: all 0.3s linear;
+	transition: all 0.3s linear;
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	appearance: none;
+
+	&:focus {
+		background-color: #f0fafe;
+		outline: none;
+		border-color: #6dcff6;
+	}
+}
+
+label {
+	font-size: 11px;
+	color: #cacaca;
+	text-transform: uppercase;
+	letter-spacing: .1em;
+	position: absolute;
+	padding: 20px 0 0 20px;
+}
+
+button,
+.button,
+input[type="submit"] {
+	background-color: $secondary-color;
+	color: #fff;
+	border: 0;
+	padding: 1em 2em;
+	font-size: 12px;
+	@include border-radius(4px);
+	@include box-shadow(0 2px 0 0 darken($secondary-color, 25%) );
+	-webkit-transition: all 0.3s linear;
+	-moz-transition: all 0.3s linear;
+	-ms-transition: all 0.3s linear;
+	-o-transition: all 0.3s linear;
+	transition: all 0.3s linear;
+
+	&:hover {
+		background-color: darken($secondary-color, 5%);
+	@include box-shadow(0 2px 0 0 darken($secondary-color, 30%) );
+	}
+}

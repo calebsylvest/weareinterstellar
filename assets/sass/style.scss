@@ -1,0 +1,115 @@
+/* Import Partials!
+-------------------------------------------------------------------------------*/
+
+@import "compass/css3";
+
+// browser reset
+@import "partials/_normalize";
+
+@import "modules/_vars";
+
+
+@import "partials/_grid";
+@import "partials/_global";
+@import "partials/_layout";
+@import "partials/_type";
+@import "partials/_buttons";
+
+@import "partials/_masthead";
+@import "partials/_footer";
+@import "partials/_widgets";
+
+// Pages
+@import "partials/pages/_home";
+@import "partials/pages/_blog";
+@import "partials/pages/_work";
+@import "partials/pages/_products";
+@import "partials/pages/_culture";
+
+
+
+
+.hero {
+	background-color: #151414;
+	text-align: center;
+  	//padding: 2.75em 0;
+  	min-height: 500px;
+  	position: relative;
+
+  	.hero-content {
+  		margin: 2.5em 0;
+
+  		@media screen and (min-width: $small-screen) {
+			position: absolute;
+	  		top: 50%;
+	  		left: 50%;
+	  		@include transform(translateX(-50%) translateY(-50%) );
+
+	  		h3 {
+	  			font-size: 1.5em;
+	  		}
+
+	  		h2 {
+	  			font-size: 4em;
+	  			line-height: 1;
+	  		}
+		}
+
+		@media screen and (max-width: $small-screen) {
+			.button {
+  				display: block;
+  				max-width: 200px;
+  				margin: 0 auto 1em;
+  			}
+		}
+  	}
+
+  	h2, h3 {
+  		color: $neutral-color;
+  	}
+
+  	h3 {
+  		font-size: 1.2em;
+  		font-family: $serif-font;
+  		font-weight: normal;
+  		font-style: italic;
+  		margin: 0;
+  	}
+
+  	h2 {
+  		font-size: 2.2em;
+  		margin-top: 0;
+  	}
+}
+
+
+
+.blog .hero {
+	min-height: 300px;
+}
+
+
+
+
+
+// style any section text consistently
+.section-text {
+	float: none;
+	margin: 0 auto;
+	text-align: center;
+
+	@extend .medium-6;
+	@extend .large-4;
+	@extend .column;
+
+	h2 {
+		font-size: 1em;
+	}
+}
+
+// avatar image
+.avatar {
+	width: 6em;
+	max-width: 100px;
+	@include border-radius($global-rounded);
+}

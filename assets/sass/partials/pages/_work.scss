@@ -1,0 +1,81 @@
+/*
+  *
+  * Work
+  *
+  */
+
+
+.work {
+
+	.hero {
+		background: url('../img/hero-astronaut.jpg') center center scroll;
+		background-size: cover;
+
+		.hero-content {
+			//position: static;
+			//text-align: left;
+			//@include transform(none);
+
+			h2, h3 {
+				//display: inline-block;
+			}
+		}
+	}
+	
+	// global single project block
+	.project-single {
+		
+		// "for client" text
+		h3 {
+			font-size: 1em;
+			font-style: italic;
+			font-family: $serif-font;
+			margin: 0;
+		}
+		
+		// project title text
+		h2 {
+			font-size: 2em;
+			margin-top: 0;
+		}
+		
+		// project description
+		p {
+			max-width: 22em;
+		}
+
+		.button {
+			margin-left: 0;
+			@extend .orange-button;
+		}
+	}
+	
+	// TURN Map project
+	.project-turn {
+		background: url('../img/bg-turn.jpg') center center scroll;
+		background-size: cover;
+
+		h2, h3, p {
+			color: $neutral-color;
+		}
+	}
+
+	// Frito Lay project
+	.project-frito-lay {
+		background-color: #0fcfc5;
+
+		h2, h3, p {
+			//color: $neutral-color;
+		}
+	}
+
+} // end .work
+
+.client-list {
+	background: url(../img/pattern-cube.png) repeat;
+	
+	// this is temporary while using an image for fake client logos
+	img {
+		width: 100%;
+	}
+}

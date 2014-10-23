@@ -1,0 +1,91 @@
+/* 
+  *
+  * Footer
+  *
+  */
+
+// footer container
+.site-footer {
+	text-align: center;
+	background-color: $purple-color;
+	color: $neutral-color;
+}
+
+// contains widgets
+.top-footer {
+	background: url('../img/bg-footer.jpg') center center scroll;
+	background-size: cover;
+	padding: 2.75em 0;
+
+	.widget {
+		//margin-bottom: 2em;
+
+		h3 {
+			//font-size: .9em;
+			color: $neutral-color;
+			opacity: .8;
+		}
+
+		p {
+			font-size: .9em;
+			opacity: .6;
+		}
+
+		.button {
+			@extend .orange-button;
+		}
+	}
+}
+
+// contains copyright text and logo
+.bottom-footer {
+	background-color: darken($purple-color, 20%);
+	padding: 2.7em;
+	position: relative;
+
+	small {
+		font-family: $sans-font;
+		font-size: 13px;
+		opacity: .3;
+		@include transition(.2s all linear);
+
+		&:hover {
+			opacity: .5;
+		}
+	}
+
+	.logo {
+		width: 50px;
+		height: 50px;
+		background-color: $neutral-color;
+		display: block;
+		position: absolute;
+		left: 50%;
+		top: 0;
+		@include border-radius($global-rounded);
+		@include transform(translateX(-50%) translateY(-50%) );
+	}
+}
+
+// nav in top-footer
+.footer-nav ul {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+
+	li {
+		display: inline-block;
+
+		a {
+			font-family: $sans-font;
+			font-size: .8em;
+			color: $neutral-color;
+			opacity: .5;
+			padding: 1em;
+
+			&:hover {
+				opacity: 1;
+			}
+		}
+	}
+}

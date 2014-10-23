@@ -1,0 +1,62 @@
+/* 
+  *
+  * Widgets
+  *
+  */
+
+
+
+/* Global Widget Styles */
+.widget {
+	margin-bottom: 2em;
+
+	h3 {
+		font-size: 1em;
+	}
+	
+	// widgets in the sidebar
+	.sidebar & {
+		
+		// sidebar widget content is jockeyed over
+		.widget-content {
+			margin-left: 7em;
+			padding-bottom: 2.5em;
+		}
+
+		p {
+			max-width: 14em;
+		}
+	}
+}
+
+/* Author Widget Styles */
+.author-widget {
+
+	.author-avatar {
+		float: left;
+		@extend .avatar;
+	}
+
+	.widget-content {
+		border-bottom: $hr-border-width $hr-border-style $hr-border-color;
+	}
+
+	.view-more {
+		font-size: .9em;
+		font-family: $sans-font;
+		color: $header-font-color;
+
+		&:hover {
+			color: $primary-color;
+		}
+	}	
+}
+
+/* Newsletter Widget Styles */
+.newsletter-widget {
+
+	.sidebar & {
+		//margin-left: 7em;
+		
+	}
+}

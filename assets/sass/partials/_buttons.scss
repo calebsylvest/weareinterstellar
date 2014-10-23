@@ -1,0 +1,39 @@
+/*
+  *
+  * Buttons
+  *
+  */
+
+
+
+// generic button style
+.button {
+	font-size: .8em;
+	font-family: $sans-font;
+	color: $neutral-color;
+	display: inline-block;
+	padding: 0.5em 1em;
+	margin: 0 .5em 1em;
+	@include border-radius($global-radius);
+}
+
+.outline-button {
+	padding: .8em 2em;
+	border: 1px solid rgba($neutral-color, .7);
+	opacity: .7;
+
+	&:hover {
+		color: $neutral-color;
+		border-color: rgba($neutral-color, 1);
+		opacity: 1;
+	}
+}
+
+.orange-button {
+	background-color: $primary-color;
+
+	&:hover {
+		color: $neutral-color;
+		background-color: darken($primary-color, 10%);
+	}
+}

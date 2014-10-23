@@ -1,0 +1,78 @@
+/* 
+  *
+  * Masthead
+  *
+  */
+
+
+
+// contains brand logo and site navigation
+.masthead {
+	padding: 1em;
+	
+	// logo container
+	h1 {
+		margin: 0 0 10px 0;
+		display: inline-block;
+
+		@media screen and (min-width: $small-screen) {
+			float: left;
+		}
+
+		a {
+			color: $neutral-color;
+
+			.logo {
+				display: block;
+				width: 70px;
+				height: 70px;
+				padding: 17px;
+				background-color: #fff;
+				@include border-radius($global-rounded);
+
+				img {
+					display: block;
+					width: 35px;
+					height: 35px;
+				}
+			}
+		}
+	}
+
+	.main-menu {
+		line-height: 40px;
+
+		@media screen and (min-width: $small-screen) {
+			float: right;
+			line-height: 70px;
+		}
+
+		ul {
+			list-style: none;
+			margin: 0;
+			padding: 0;
+
+			li {
+				display: inline-block;
+
+				a {
+					font-size: .8em;
+					font-family: $sans-font;
+					color: $neutral-color;
+					opacity: .8;
+					padding: 1em;
+					background-position: center 25px;
+					background-size: 22px 10px;
+					@include transition(.1s all linear);
+
+					&:hover,
+					&.active {
+						opacity: 1;
+						background: url('../img/icon-lightning.png') no-repeat  center bottom;
+						background-size: 22px 10px;
+					}
+				}
+			}
+		}
+	}
+}

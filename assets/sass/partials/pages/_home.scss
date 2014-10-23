@@ -1,0 +1,62 @@
+/*
+  *
+  * Home
+  *
+  */
+
+
+.homepage {
+
+	.hero {
+		background: url('../img/hero-rocket.jpg') center center scroll;
+		background-size: cover;
+
+		.hero-content {
+			//position: static;
+			//text-align: left;
+			//@include transform(none);
+
+			h2, h3 {
+				//display: inline-block;
+			}
+		}
+	}
+
+	.sample-project {
+		background-color: $purple-color;
+		text-align: center;
+
+		min-height: 450px;
+		overflow: hidden;
+		position: relative;
+
+		h2 {
+			font-size: 2em;
+			color: $neutral-color;
+			line-height: 1.1;
+		}
+
+		p {
+			font-size: .9em;
+			color: $neutral-color;
+			max-width: 20em;
+			margin: 0 auto;
+		}
+
+		.project-device {
+			position: absolute;
+			left: 50%;
+			@include transform(translateX(-50%) );
+
+			bottom: -420px;
+			@include transition(.25s all linear);
+		}
+
+		&:hover .project-device {
+			bottom: -365px;
+		}
+	}
+	
+	
+
+} // end .home
