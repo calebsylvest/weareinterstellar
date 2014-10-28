@@ -65,11 +65,7 @@
 
 		<div class="hero-content">
 		
-			<h3>Our work is</h3>
-			<h2>Out of this World</h2>
-
-			<a class="button outline-button" href="contact.html">Work with us</a>
-			<a class="button outline-button" href="work.html">View our work</a>
+			<h2>Flexslider</h2>
 
 		</div><!-- /hero-content -->
 	
@@ -82,13 +78,11 @@
 			<ul class="slides">
 				
 				<li>
-					<a href="blog.html">
-						<h2>Woods Walker Media</h2>
+					<h2>Woods Walker Media</h2>
 
-						<p>Branding + Identity + Graphics</p>
+					<p>Branding + Identity + Graphics</p>
 
-						<img class="project-device" src="assets/img/ipad.png">
-					</a>
+					<img class="project-device" src="assets/img/ipad.png">
 				</li>
 				
 				<li>
@@ -120,60 +114,6 @@
 		</div><!-- /flexslider -->
 
 	</section><!-- /work -->
-
-	<section id="services" class="services story">
-
-		<div class="row">
-		
-			<div class="note large-3 large-push-1 column">
-
-				<h2>Crafting experiences just so</h2>
-
-				<p>We combine personality with purpose, ingenuity, and intent as we design and build any project. We believe in delighting our clients and their customers with experiences that wow, and solve a problem in a unique way.</p>
-
-			</div>
-
-			<div class="small-6 large-3 large-push-1 column">
-				
-				<ul class="service-group">
-					<li><h4>Branding</h4></li>
-					<li>Brand creation</li>
-					<li>Logo design</li>
-					<li>Brand material</li>
-				</ul>
-
-				<ul class="service-group">
-					<li><h4>Digital</h4></li>
-					<li>Website Design &amp; Development</li>
-					<li>Application development</li>
-					<li>Responsive web design</li>
-					<li>Content Management System</li>
-				</ul>
-
-			</div>
-
-			<div class="small-6 large-3 large-push-1 column">
-				
-				<ul class="service-group">
-					<li><h4>Strategy</h4></li>
-					<li>UX Design</li>
-					<li>Wireframing</li>
-					<li>Application speculation</li>
-				</ul>
-
-				<ul class="service-group">
-					<li><h4>Print</h4></li>
-					<li>Business cards</li>
-					<li>Letterhead</li>
-					<li>Posters</li>
-					<li>Business material</li>
-				</ul>
-
-			</div>
-
-		</div><!-- /row -->
-
-	</section>
 
 	<section id="contact" class="contact">
 
@@ -217,22 +157,22 @@
 <!-- don't forget to concatenate and minify if needed -->
 <script src="assets/js/functions.js"></script>
 
-<!-- FlexSlider -->
-<script defer src="assets/js/libs/jquery.flexslider.js"></script>
+  <!-- FlexSlider -->
+  <script defer src="assets/js/libs/jquery.flexslider.js"></script>
 
-<script type="text/javascript">
-  $(function(){
-    SyntaxHighlighter.all();
-  });
-  $(window).load(function(){
-    $('.flexslider').flexslider({
-      animation: "slide",
-      start: function(slider){
-        $('body').removeClass('loading');
-      }
+  <script type="text/javascript">
+    $(function(){
+      SyntaxHighlighter.all();
     });
-  });
-</script>
+    $(window).load(function(){
+      $('.flexslider').flexslider({
+        animation: "slide",
+        start: function(slider){
+          $('body').removeClass('loading');
+        }
+      });
+    });
+  </script>
 
 <!-- Asynchronous google analytics; this is the official snippet.
 	 Replace UA-XXXXXX-XX with your site's ID and uncomment to enable.

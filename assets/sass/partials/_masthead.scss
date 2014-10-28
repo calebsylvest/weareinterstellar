@@ -24,16 +24,10 @@
 
 			.logo {
 				display: block;
-				width: 70px;
-				height: 70px;
-				padding: 17px;
-				background-color: #fff;
-				@include border-radius($global-rounded);
+				width: 1.5em;
 
 				img {
 					display: block;
-					width: 35px;
-					height: 35px;
 				}
 			}
 		}
@@ -61,18 +55,47 @@
 					color: $neutral-color;
 					opacity: .8;
 					padding: 1em;
-					background-position: center 25px;
-					background-size: 22px 10px;
-					@include transition(.1s all linear);
+					background-position: center center;
+					@include transition(.2s all linear);
 
 					&:hover,
 					&.active {
 						opacity: 1;
-						background: url('../img/icon-lightning.png') no-repeat  center bottom;
-						background-size: 22px 10px;
+						background: url('../img/icon-big-dipper.svg') no-repeat  center bottom;
 					}
 				}
 			}
 		}
 	}
 }
+
+
+// svg logo
+.brand-logo {
+	width: 200px;
+
+	&:hover {
+		
+		.planet {
+			-webkit-animation-iteration-count:infinite;
+			-webkit-animation-timing-function:linear;
+			-webkit-animation-name:orbit;
+
+			-moz-animation-iteration-count:infinite;
+			-moz-animation-timing-function:linear;
+			-moz-animation-name:orbit;
+
+			-webkit-animation-duration:5s; -moz-animation-duration:5s;
+
+			transform-origin: center center;
+		}
+	}
+
+
+}
+
+@-webkit-keyframes orbit { from { -webkit-transform:rotate(0deg) } to { -webkit-transform:rotate(360deg) } }
+@-webkit-keyframes moon { from { -webkit-transform:rotate(0deg) } to { -webkit-transform:rotate(360deg) } }
+
+@-moz-keyframes orbit { from { -moz-transform:rotate(0deg) } to { -moz-transform:rotate(360deg) } }
+@-moz-keyframes moon { from { -moz-transform:rotate(0deg) } to { -moz-transform:rotate(360deg) } }
