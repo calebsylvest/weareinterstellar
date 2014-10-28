@@ -28,8 +28,8 @@
 	background-color: $red-color;
 	text-align: center;
 
-	min-height: 350px;
-	overflow: hidden;
+	//min-height: 350px;
+	//overflow: hidden;
 	position: relative;
 
 	h2 {
@@ -37,6 +37,8 @@
 		color: $neutral-color;
 		line-height: 1;
 		margin-bottom: .2em;
+		margin-top: 1.5em;
+		margin-top: 2.75rem;
 	}
 
 	p {
@@ -48,18 +50,36 @@
 		margin: 0 auto;
 	}
 
-	/*.project-device {
-		position: absolute;
-		left: 50%;
-		@include transform(translateX(-50%) );
+	@media screen and (max-width: $medium-screen) {
+		.flex-direction-nav {
+			display: none;
+		}
 
-		bottom: -420px;
-		@include transition(.25s all linear);
+		.project-device {
+			margin: 2em auto -14em;
+		}
+  	}
+
+	@media screen and (min-width: $medium-screen) {
+		
+		.project-device {
+			margin-top: 3em;
+			@include transition(.25s all linear);
+		}
+		
+		.flexslider .slides > li {
+			position: relative;
+			height: 350px;
+		}
+
+		&:hover .project-device {
+			margin-top: 0;
+		}
 	}
 
-	&:hover .project-device {
-		bottom: -365px;
-	}*/
+	
+
+	
 } // end .work
 
 .services {

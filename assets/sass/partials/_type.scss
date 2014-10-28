@@ -49,7 +49,12 @@ h1 {
 }
 
 h2 {
-  font-size: $h2-font-size;
+  //font-size: $h2-font-size;
+  font-size: 2.2em;
+
+  @media screen and (min-width: $small-screen) {
+    font-size: $h2-font-size;
+  }
 }
 
 h3 {
